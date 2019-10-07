@@ -61,7 +61,7 @@ export default class Mario {
   }
 
   fire() {
-    if (this.ammo === 0) return
+    if (this.ammo === 0 || this.shells.length >= 3) return
     if (this.firing) {
       const newShell = new Shell({
         x: this.x,
@@ -77,7 +77,12 @@ export default class Mario {
 
   reload() {
     if (this.ammo === 0) {
-      this.ammo = 3;
+      setTimeout(() => {
+        this.ammo = 3;
+
+      }, 1000)
+    } else {
+      return
     }
   }
 

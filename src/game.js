@@ -14,6 +14,7 @@ export default class Game {
     this.level = 1;
     this.lost = false
     this.win = false
+    this.playAgain = document.querySelector('.hide')
   }
 
   
@@ -39,8 +40,20 @@ export default class Game {
       this.ctx.fillText(`Donkey's HP:${this.donkey.hp}`, 10, 55)
       this.ctx.font = '30px Verdana'
     }
-    if (this.lost) {
-      this.ctx.fillText('You Lost', this.canvas.width / 2 - 60, this.canvas.height / 2)
+    if (this.lost) {      
+      this.playAgain.classList.remove('hide');
+      this.playAgain.addEventListener('click', () => {
+        this.score = 0;
+        this.level = 1;
+        this.bowsers = []
+        this.mario.ammo = 3;
+        this.mario.shells = []
+        this.mario.x = this.canvas.width / 2 - 15;
+        this.mario.y = this.canvas.height - 40;
+        this.lost = false;
+        this.playAgain.classList.add('hide')
+      })
+      // debugger
       return
     } else if (this.win) {
       this.ctx.fillText('You Win', this.canvas.width / 2 - 60, this.canvas.height / 2)
@@ -95,7 +108,7 @@ export default class Game {
       this.bowsers.forEach(bowser => bowser.speed = 80)
     } else if (this.score >= 2000 && this.score < 3000) {
       this.bowsers.forEach(bowser => bowser.speed = 100)
-    } else if (this.score >= 3000 && this.score < 4000) {
+    } else if (this.score >= 3000 && this.score < 4000 && !this.donkey) {
     //   this.bowsers.forEach(bowser => bowser.speed = 120)
     // } else if (this.score >= 4000 && this.score < 5000) {
     //   this.bowsers.forEach(bowser => bowser.speed = 140)

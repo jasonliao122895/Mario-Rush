@@ -51,10 +51,8 @@ export default class InputHandler {
         case 75:
           mario.firing = true
           break;
-        case 32:
-          setTimeout(() => {
-            mario.reload()
-          }, 1000)
+        case 74:
+          mario.reload()
           break;
       }
     })

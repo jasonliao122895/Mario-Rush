@@ -23,7 +23,8 @@
       background-color: black;
       border: 1px solid black;
       color: red;
-      font-size: 14px;
+      font-size: 20px;
+      padding: 10px;
     }
     .title {
       width: 100%;
@@ -68,6 +69,21 @@
       -1px 1px 0 #fff,
       -1px -1px 0 #fff
     }
+    .hide {
+      display: none;
+    }
+    #play-again {
+      position: absolute;
+      bottom: 30;
+      left: 50;
+      right: 50;
+      background-color: black;
+      border: 1px solid black;
+      color: red;
+      font-size: 20px;
+      padding: 10px;
+
+    }
   </style>
   <script type="application/javascript" src="./dist/main.js"></script>
 </head>
@@ -78,6 +94,7 @@
   <div id="game-container">
     <canvas id="game-canvas"></canvas>
     <button id="play">Play!</button>
+    <button id="play-again" class="hide">Play Again!</button>
   </div>
   <div class="info-container">
     <div>
@@ -89,7 +106,7 @@
       <li>A - Left</li>
       <li>D - Right</li>
       <li>K - Shoot</li>
-      <li>Space - Reload</li>
+      <li>J - Reload</li>
     </div>
     <div class="sc-links">
       <a href="https://github.com/jasonliao122895"><img src="./dist/github.png" alt=""></a>
