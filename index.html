@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #game-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #game-canvas {
+      border: 1px solid black;
+    }
+    #play {
+      position: absolute;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      top: 50;
+      right: 50;
+      left: 50;
+      background-color: black;
+      border: 1px solid black;
+      color: red;
+      font-size: 14px;
+    }
+    .title {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .title h1 {
+      color: red;
+      text-shadow: 
+      2px -2px 0 black,
+      -2px 2px 0 black,
+      -2px -2px 0 black,
+      2px 2px 0 black
+    }
+    .sc-links img {
+      width: 50px;
+      height: 50px;
+    }
+    .keys li {
+      list-style: none;
+    }
+    .info-container {
+      display: flex;
+      justify-content: center;
+      padding-top: 50px;
+    }
+    body {
+      background-image: url('./dist/mariorushbk.jpg');
+      background-size: cover;
+    }
+  </style>
+  <script type="application/javascript" src="./dist/main.js"></script>
+</head>
+<body>
+  <div class="title">
+    <h1>Mario Rush</h1>
+  </div>
+  <div id="game-container">
+    <canvas id="game-canvas"></canvas>
+    <button id="play">Play!</button>
+  </div>
+  <div class="info-container">
+    <div class="keys">
+      <li>W - Up</li>
+      <li>S - Down</li>
+      <li>A - Left</li>
+      <li>D - Right</li>
+      <li>K - Shoot</li>
+      <li>Space - Reload</li>
+    </div>
+    <div class="sc-links">
+      <a href=""><img src="./dist/github.png" alt=""></a>
+      <a href=""><img src="./dist/linkedin.png" alt=""></a>
+    </div>
+  </div>
+</body>
+</html>
