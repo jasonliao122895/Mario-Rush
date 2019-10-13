@@ -47,7 +47,8 @@ export default class Game {
         this.level = 1;
         this.bowsers = []
         this.mario.ammo = 3;
-        this.mario.shells = []
+        this.mario.shells = [];
+        this.donkey = null;
         this.mario.x = this.canvas.width / 2 - 15;
         this.mario.y = this.canvas.height - 40;
         this.lost = false;
