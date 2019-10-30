@@ -43,6 +43,8 @@
     .sc-links img {
       width: 50px;
       height: 50px;
+      border-radius: 50%;
+      box-sizing: border-box;
     }
     .keys li {
       list-style: none;
@@ -54,8 +56,10 @@
     }
     .info-container {
       display: flex;
-      justify-content: center;
-      padding-top: 50px;
+      width: 500px;
+      justify-content: space-evenly;
+      padding-left: 50px;
+      align-items: center;
     }
     body {
       background-image: url('./dist/mariorushbk.jpg');
@@ -87,6 +91,11 @@
       padding: 10px;
 
     }
+    .content-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
   </style>
   <script type="application/javascript" src="./dist/main.js"></script>
   
@@ -95,26 +104,29 @@
   <div class="title">
     <h1>Mario Rush</h1>
   </div>
-  <div id="game-container">
-    <canvas id="game-canvas"></canvas>
-    <button id="play">Play!</button>
-    <button id="play-again" class="hide">Play Again!</button>
-  </div>
-  <div class="info-container">
-    <div>
-      <p>Kill bowsers to get points. When you reach 3000 points, beat the boss the win the game</p>
+  <div class="content-container">
+
+    <div id="game-container">
+      <canvas id="game-canvas"></canvas>
+      <button id="play">Play!</button>
+      <button id="play-again" class="hide">Play Again!</button>
     </div>
-    <div class="keys">
-      <li>W - Up</li>
-      <li>S - Down</li>
-      <li>A - Left</li>
-      <li>D - Right</li>
-      <li>K - Shoot</li>
-      <li>J - Reload</li>
-    </div>
-    <div class="sc-links">
-      <a href="https://github.com/jasonliao122895"><img src="./dist/github.png" alt=""></a>
-      <a href="https://www.linkedin.com/in/jliao1228/"><img src="./dist/linkedin.png" alt=""></a>
+    <div class="info-container">
+      <div>
+        <p>Kill bowsers to get points. When you reach 3000 points, beat the boss the win the game</p>
+      </div>
+      <div class="keys">
+        <li>W - Up</li>
+        <li>S - Down</li>
+        <li>A - Left</li>
+        <li>D - Right</li>
+        <li>K - Shoot</li>
+        <li>J - Reload</li>
+      </div>
+      <div class="sc-links">
+        <a href="https://github.com/jasonliao122895"><img src="./dist/github.png" alt=""></a>
+        <a href="https://www.linkedin.com/in/jliao1228/"><img src="./dist/linkedin.png" alt=""></a>
+      </div>
     </div>
   </div>
 </body>

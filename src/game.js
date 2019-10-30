@@ -54,7 +54,7 @@ export default class Game {
         this.lost = false;
         this.playAgain.classList.add('hide')
       })
-      // debugger
+      
       return
     } else if (this.win) {
       this.ctx.fillText('You Win', this.canvas.width / 2 - 60, this.canvas.height / 2)
