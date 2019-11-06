@@ -56,9 +56,7 @@
     }
     .info-container {
       display: flex;
-      width: 500px;
       justify-content: space-evenly;
-      padding-left: 50px;
       align-items: center;
     }
     body {
@@ -96,25 +94,43 @@
       flex-direction: row;
       justify-content: center;
     }
+    .title-box {
+      width: 402px;
+      display: flex;
+      justify-content: center;
+    }
+    .keys-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 25px;
+    }
   </style>
   <script type="application/javascript" src="./dist/main.js"></script>
   
 </head>
 <body>
   <div class="title">
-    <h1>Mario Rush</h1>
+    <div class="title-box">
+      <h1>Mario Rush</h1>
+    </div>
   </div>
   <div class="content-container">
+
+    
+
+    <div class="info-container">
+        <p>Kill bowsers to get points. When you reach 3000 points, beat the boss the win the game</p>
+    </div>
 
     <div id="game-container">
       <canvas id="game-canvas"></canvas>
       <button id="play">Play!</button>
       <button id="play-again" class="hide">Play Again!</button>
     </div>
-    <div class="info-container">
-      <div>
-        <p>Kill bowsers to get points. When you reach 3000 points, beat the boss the win the game</p>
-      </div>
+
+    <div class="keys-container">
+
       <div class="keys">
         <li>W - Up</li>
         <li>S - Down</li>
@@ -127,7 +143,10 @@
         <a href="https://github.com/jasonliao122895"><img src="./dist/github.png" alt=""></a>
         <a href="https://www.linkedin.com/in/jliao1228/"><img src="./dist/linkedin.png" alt=""></a>
       </div>
+
     </div>
+
+
   </div>
 </body>
 </html>
