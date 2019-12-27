@@ -1,5 +1,7 @@
 # Mario Rush
 
+![homepic](/dist/mariorushreadme.png)
+
 Mario is a shooting game where the player shoots shells to destroy incoming Bowsers to gain points. After reaching 3000 points, the player will face off against Donkey Kong Jr to win the game.
 
 ## Live

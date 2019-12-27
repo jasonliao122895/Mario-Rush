@@ -14,8 +14,9 @@ export default class Mario {
     this.canvasHeight = canvas.height
     this.color = 'red';
     this.shells = [];
-    this.firing = false
+    this.firing = false;
     this.ammo = 3
+    this.reloading = false;
   }
 
   draw(ctx) {
@@ -61,6 +62,7 @@ export default class Mario {
   }
 
   fire() {
+    if (this.reloading) return
     if (this.ammo === 0 || this.shells.length >= 3) return
     if (this.firing) {
       const newShell = new Shell({
@@ -76,13 +78,11 @@ export default class Mario {
   }
 
   reload() {
-    if (this.ammo === 0) {
+    if (this.reloading) {
       setTimeout(() => {
         this.ammo = 3;
-
+        this.reloading = false;
       }, 1000)
-    } else {
-      return
     }
   }
 

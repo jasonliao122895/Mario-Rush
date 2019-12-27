@@ -52,6 +52,7 @@ export default class InputHandler {
           mario.firing = true
           break;
         case 74:
+          mario.reloading = true
           mario.reload()
           break;
       }
