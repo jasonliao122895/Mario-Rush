@@ -15,7 +15,7 @@ export default class Mario {
     this.color = 'red';
     this.shells = [];
     this.firing = false;
-    this.ammo = 3
+    this.ammo = 3;
     this.reloading = false;
   }
 
@@ -62,7 +62,7 @@ export default class Mario {
   }
 
   fire() {
-    if (this.reloading) return
+    if (this.reloading) return;
     if (this.ammo === 0 || this.shells.length >= 3) return
     if (this.firing) {
       const newShell = new Shell({
